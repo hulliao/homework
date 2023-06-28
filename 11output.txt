@@ -1,0 +1,22 @@
+Hello huaju, your home is /home/huaju, and your shell is /bin/bash
+/home/huaju/Code/MCB185-2023:
+README.md
+REFERENCE.md
+math-n-loops.pdf
+unit0_tools_of_the_trade
+unit1_basic_unix
+unit2_beginning_python
+unit3_tuples_and_lists
+unit4_functions_and_files
+unit5_advanced_linux
+unit6_dictionaries_and_regex
+unit7_complex_data_structures
+unit8_final_projects
+
+/home/huaju/Code/homework:
+00helloworld.py
+10hello.sh
+11output.txt
+LICENSE
+README.md
+E.coli
