@@ -107,9 +107,9 @@ for i in range(10):
 	if i < 8: continue # this skips ahead to next iteration
 	print('skipped until', i)
     
-for i in range(20):
+for i in range(20): # prints 0 to 19
     print(i, end= '')
 print()
     
-for i in range(20+1):
+for i in range(20+1): # prints 0 to 20
     print(i, end= '')
