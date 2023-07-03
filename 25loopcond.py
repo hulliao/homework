@@ -2,8 +2,6 @@
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # The real power of programming comes from nesting loops and conditionals
 
 dna = 'ATAGCGAATATCTCTCATGAGAGGGAA'
@@ -13,6 +11,7 @@ for i in range(len(dna)):
 	if codon == 'ATG':
 		print(f'found potential start codon at {i+1}')
 
+"""
 # Loops can be inside loops
 
 for frame in range(3):
