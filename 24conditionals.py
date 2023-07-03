@@ -4,8 +4,6 @@ import random
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # The standard conditional statement is a single 'if'
 
 a = 1
@@ -28,7 +26,7 @@ print(type(c))
 
 r = random.randint(1, 4) # generate a random number from 1 to 4
 if   r == 1: print('A')
-elif r == 2: print('C')
+if r == 2: print('C')
 elif r == 3: print('G')
 else:        print('T')
 
@@ -108,6 +106,10 @@ print('broken at', i)
 for i in range(10):
 	if i < 8: continue # this skips ahead to next iteration
 	print('skipped until', i)
-
-"""
-
+    
+for i in range(20):
+    print(i, end= '')
+print()
+    
+for i in range(20+1):
+    print(i, end= '')
