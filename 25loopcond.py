@@ -6,12 +6,13 @@
 
 dna = 'ATAGCGAATATCTCTCATGAGAGGGAA'
 
+print(f'{len(dna)} ') 
+
 for i in range(len(dna)):
 	codon = dna[i:i+3]
 	if codon == 'ATG':
 		print(f'found potential start codon at {i+1}')
 
-"""
 # Loops can be inside loops
 
 for frame in range(3):
@@ -43,5 +44,3 @@ for nt1 in nts:
 		if nt1 == nt2: print('+1', end='\t')
 		else: print('-1', end='\t')
 	print()
-
-"""
