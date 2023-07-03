@@ -7,6 +7,8 @@
 
 # Note: this is a common interview question
 
+for i in range(1,100+1):
+    if
 
 """
 python3 23fizzbuzz.py
