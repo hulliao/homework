@@ -8,6 +8,19 @@
 
 # Note: set random.seed() if you want repeatable random numbers
 
+import random
+
+seq = ''
+s = 0
+length = 30
+for i in range(length):
+    a = random.random()
+    if a >= 0.4: seq += random.choice('AT')
+    else:   seq += random.choice('GC')
+    p = seq[i]
+    if p == 'A' or p == 'T': s += 1
+per = s / length
+print('30', per, seq)
 
 """
 python3 25atseq.py
