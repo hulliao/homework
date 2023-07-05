@@ -7,7 +7,15 @@
 
 # Hint: if you get stuck for more than 10 minutes, get help
 
-
+amino = 'ARNDCQEGHILKMFPSTWYV'
+comb = 0
+for i in range(0, len(amino)):
+    for j in range(i): 
+        print(amino[j], amino[i])
+        comb += 1
+    #pair amino[i] with everything after it one by one
+print(comb)
+    
 """
 python3 28aapairs.py
 A C
