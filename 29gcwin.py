@@ -13,7 +13,14 @@
 
 seq = 'ACGACGCAGGAGGAGAGTTTCAGAGATCACGAATACATCCATATTACCCAGAGAGAG'
 w = 11
-
+for i in range(0, len(seq) -10):
+    n = 0
+    ch = seq[i:i+11]
+    for j in range(0, len(ch)):
+        if ch[j] == 'C': n += 1
+        if ch[j] == 'G': n += 1
+    per = n / len(ch)
+    print(i, ch, f'{per:.4f}')
 
 """
 python3 29gcwin.py
