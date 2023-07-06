@@ -2,8 +2,6 @@
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # Lists are like tuples, but are mutable (you can change their contents)
 # Create lists with square brackets instead of (optional) parentheses
 
@@ -47,7 +45,8 @@ strings.sort()
 print(strings)
 
 # you can combine lists with the + sign
-stuff = p + strings
+stuff = p + strings 
+    # depending on which variable you put first, that variable will print first
 print(stuff)
 
 # you can find the first position of an item in the list with index()
@@ -76,8 +75,10 @@ todo = []
 todo.append('laundry')
 print(todo)
 
+todo = ['th'] # testing
+todo.append('laundry')
+print(todo)
+
 # Lists are often initialized with a bunch of zeros
 count = [0] * 20
 print(count)
-
-"""
