@@ -2,8 +2,6 @@
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # Sometimes we want to work with multiple variables at the same time
 # A convenient way to do this is a 'tuple'
 # Any time you have comma separated values, you have a 'tuple'
@@ -11,6 +9,9 @@
 
 tup = 1, 2, 3
 print(tup)      # all three values are contained in a single varible
+
+tup = 'hep', 4 # testing
+print(tup)
 
 tup = (1, 2, 3)
 print(tup)      # same thing as above, parentheses optional
@@ -32,6 +33,5 @@ print(tup[:2])
 
 # Tuples are immutable, meaning you can't change their contents
 
-tup[1] = 'two'
-
-"""
+tup = 'two'
+print(tup[:1])
