@@ -33,5 +33,5 @@ print(tup[:2])
 
 # Tuples are immutable, meaning you can't change their contents
 
-tup = 'two'
-print(tup[:1])
+tup[1] = 'two' # proving that you can't replace contents within tuples
+print(tup)
