@@ -2,8 +2,6 @@
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # Previously, we have use "function syntax", which has the form
 #    function(data)
 # Python also uses "method syntax", which has the form
@@ -14,6 +12,8 @@
 s = 'ACGT'
 print(len(s))       # function syntax
 print(s.isupper())  # method syntax
+# s.isupper returns True if all characters in the string are uppercase
+# otherwise, it returns False
 
 # We have seen a few case of "dots" before but these weren't object methods
 # However, they were object syntax
@@ -42,8 +42,6 @@ print(s.strip('<>'))
 print(s.replace('>>', '.'))
 
 
-
-
 # upper() and lower() convert case
 # isupper() and islower() check for case
 print(s.lower())
@@ -59,5 +57,3 @@ print(s.find('Z'))
 # startswith() and endswith() search the start and end of strings
 print(s.startswith('>'))
 print(s.endswith('>'))
-
-"""
