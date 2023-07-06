@@ -10,7 +10,14 @@ import random
 # What is the optimal strategy? Simulate it.
 # Make a table showing reroll threshold (use <=) and average damage.
 
-trials = 100
+trials = 10000
+for threshold in range(2,8):
+    jorg = 0
+    for j in range(trials):
+        roll = random.randint(1,8)
+        if roll <= threshold: roll = random.randint(1,8)
+        jorg += roll
+    print(threshold, f'{jorg / trials}')
 
 """
 python3 dnd2-piercer.py
