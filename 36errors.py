@@ -5,8 +5,6 @@ import sys
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # Once you start interacting with users, you will get erroneous input
 
 # What if your program expects a probability distribution and the
@@ -17,15 +15,17 @@ print(sum(probs))
 
 # One way to handle this is for your program to exit
 
-#assert(sum(probs) == 1) # comment this line out to continue
+# assert(sum(probs) == 1) # comment this line out to continue
 
 # But what about rounding errors?
 # You should never ask for floating point numbers to be equal to a value
 # Instead, make sure the numbers are close enough
 
-probs = [0.1, 0.2, 0.3, 0.400000000001]
+probs = [0.1, 0.2, 0.3, 0.4000000001]
 assert(math.isclose(sum(probs), 1.0)) # using default tolerance
 assert(math.isclose(sum(probs), 1.0, abs_tol=0.01)) # choose your tolerance
+# the larger the tolerance, the more bigger the differnce can be --
+# -- between the actual sum and rounded sum
 
 # To check if something works, use "try"
 # If the trial fails, the "except" clause is executed
@@ -38,7 +38,6 @@ for val in probs:
 	except:
 		print(f'cannot convert {val} to a number', file=sys.stderr)
 
-
 # If you want the program to terminate, you can raise an error
 
 for val in probs:
@@ -47,5 +46,3 @@ for val in probs:
 	except:
 		print(f'cannot convert {val} to a number', file=sys.stderr)
 		raise
-
-"""
