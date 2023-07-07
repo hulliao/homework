@@ -7,6 +7,9 @@
 
 # Note: you are not allowed to import any library except sys
 
+import sys
+
+
 
 """
 python3 30stats.py 3 1 4 1 5
