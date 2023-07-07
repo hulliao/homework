@@ -8,12 +8,10 @@
 #    Is common in Python - so you must know it when you see it
 #    Isn't found in most languages, so consider it optional
 
-"""
-
 # Consider the following initialization code:
 
 data = [] # emtpy list to be filled with append()
-for i in range(10): data.append(0)
+for i in range(10): data.append(1)
 print(data)
 
 # You can write this more succinctly with the * operator
@@ -51,5 +49,3 @@ print(square3)
 
 square3 = [i ** 2 for i in range(10) if i % 3 == 0]
 print(square3)
-
-"""
