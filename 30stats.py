@@ -8,7 +8,33 @@
 # Note: you are not allowed to import any library except sys
 
 import sys
+# python3 30stats.py 3 1 4 1 5
 
+print('Count:', len(sys.argv) -1)
+
+p = sys.argv[1:]
+print('Minimum:', float(min(p)))
+
+p = sys.argv[1:]
+print('Maximum:', float(max(p)))
+
+a = 0
+for i in range(len(p)):
+    a += float(p[i])
+q = a / (len(sys.argv) -1)
+print('Mean:', f'{q:.3f}')
+
+r = []
+for i in range(len(p)):
+    b = float(p[i]) - q
+    r.append(b ** 2)
+t = (sum(r) / (len(p))) ** (1 / 2)
+print(f'Std. dev: {t:.3f}')
+
+u = (int((len(p) -1) / 2))
+p.sort()
+v = float(p[u])
+print('Median', f'{v:.3f}')
 
 
 """
