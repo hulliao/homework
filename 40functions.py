@@ -5,8 +5,6 @@ import random
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # A function is created with the def keyword, a name, and a colon
 # All of the statements in a function are indented
 # Functions are generally declared at the top of the file
@@ -16,6 +14,7 @@ def greeting():
 	print('hello')
 
 greeting()
+greeting()
 
 # Functions can take arguments
 
@@ -23,6 +22,7 @@ def greeting1(person):
 	print(f'hello {person}')
 
 greeting1('Ian')
+greeting1('trix')
 
 # Functions can take multiple arguments
 
@@ -70,5 +70,3 @@ def factorial(n):
 	else:        return n * factorial(n-1)
 
 print(factorial(0), factorial(5))
-
-"""
