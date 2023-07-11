@@ -4,8 +4,6 @@ import random
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # There are times when you want to generate a bunch of data
 # Here's a function that returns a list of random sequences
 
@@ -26,7 +24,7 @@ print(seqs)
 # The following code may cause your computer to run out of memory!
 # Kill it with control-C and comment it out!
 
-seqs = randseq(3000, 1000000) # size of human genome in 1M chunks
+# seqs = randseq(3000, 1000000) # size of human genome in 1M chunks
 
 # Holding all of those sequences in memory is a lot of work
 # Instead of creating all sequences up-front, generate them as needed
@@ -44,7 +42,7 @@ def seqgen(count, length):
 # This works, but it takes a long time to run
 # So ^C it and comment it out after trying it
 
-for seq in seqgen(3000, 1000000): print(seq)
+# for seq in seqgen(3000, 1000000): print(seq)
 
 # In addition to generator functions, there are generator expressions
 # These look a lot like list comprehension
@@ -53,5 +51,3 @@ for seq in seqgen(3000, 1000000): print(seq)
 
 for r in (random.random() for i in range(10)):
 	print(r)
-
-"""
