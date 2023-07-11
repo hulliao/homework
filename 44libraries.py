@@ -2,8 +2,6 @@
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # You have used various libraries before (math, sys, gzip)
 # Here's how you get to environment variables
 
@@ -28,5 +26,3 @@ for defline, seq in mcb185.read_fasta(f'{home}/{prot}'):
 	words = defline.split()
 	name = words[0]
 	print(name, seq[0:20])
-
-"""
