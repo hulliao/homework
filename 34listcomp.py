@@ -11,7 +11,7 @@
 # Consider the following initialization code:
 
 data = [] # emtpy list to be filled with append()
-for i in range(10): data.append(1)
+for i in range(10): data.append(0)
 print(data)
 
 # You can write this more succinctly with the * operator
