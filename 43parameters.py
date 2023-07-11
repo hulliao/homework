@@ -2,8 +2,6 @@
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # Functions usually have a fixed number of positional arguments
 # But they may also take named arguments
 # For example, you have seen this with print() statements
@@ -17,7 +15,7 @@ print() # prints blank line at the end
 
 def get_codons(seq, frame=0):
 	codons = []
-	for i in range(frame, len(seq) - 2, 3):
+	for i in range(frame, len(seq) -2, 3):
 		codons.append(seq[i:i+3])
 	return codons
 
@@ -47,5 +45,3 @@ print(pow(1, 2, 0.5, power=3))
 
 # You can even have variable named parameters...
 # But that is a topic for another day
-
-"""
