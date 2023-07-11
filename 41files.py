@@ -5,14 +5,13 @@ import sys
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # The most common way to get data into a program is by reading a file
 # Before reading a file you must open it first
 # open() associates a file with a 'file pointer' variable
 # A file pointer is its own kind of variable type
 
 fp = open(sys.argv[0]) # opening this script itself
+print(fp)
 print(type(fp))
 
 # You can read a line from a file with the readline() method
@@ -60,5 +59,3 @@ with open('dangerous.txt', 'w') as fp:
 	fp.write('overwritten\n')
 
 # Instead of writing named output files, print to stdout and let user redirect
-
-"""
