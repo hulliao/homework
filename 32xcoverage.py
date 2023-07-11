@@ -14,6 +14,28 @@
 
 # Note: you will not get exactly the same results as the command line below
 
+import sys
+import random
+import statistics
+
+# python3 32xcoverage.py 40 5 3
+#how many reads
+#how long are reads
+#how big genome
+
+gensize = int(sys.argv[1])
+readnum = int(sys.argv[2])
+readlen = int(sys.argv[3])
+
+genome = [0] * gensize
+#find random position and put read in position
+for i in range(readnum):
+    index = random.randint(0,gensize -readlen)
+    for j in range(readlen):
+        genome[index +j] += 1
+print(genome)
+print({min(genome[readlen:-readlen])}, {max(genome[readlen:-readlen])}, {statistics.mean(genome[readlen:-readlen])})
+# slice syntax the ends to then find the min/max/avg in the middle
 
 """
 python3 32xcoverage.py 1000 100 100
