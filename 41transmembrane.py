@@ -21,6 +21,46 @@
 # Hint: create a function for hydrophobic alpha-helix
 # Hint: use the same function for both signal peptide and transmembrane
 
+import mcb185
+import gzip
+import sys
+
+# any 8 in the amino acids that have an average KD greater than 2.5
+
+def KD(aa):
+    acid = 'ACDEFGHIKLMNPQRSTVWY'
+    hydro = [1.8, 2.5, -3.5, -3.5, 2.8, -0.4, -3.2, 4.5, -3.9, 3.8, 1.9, 
+    -3.5, -1.6, -3.5, -4.5, -0.8, -0.7, 4.2, -0.9, -1.3]
+    
+    return hydro[acid.index(aa)]
+
+def hah(seq, winsiz, threshold):
+    # hydrophobic alpha helix
+    window = ' '
+    
+    for i in range(len(seq) - winsiz):
+        window = seq[i:i + winsiz]
+        kd = 0
+        a = 0
+        
+        for aa in range(len(window)):
+            if window[aa] == 'P': kd = -100
+            kd += KD(window[aa])
+            a += 1
+        if a == winsiz and (kd/a) > threshold:
+            return True
+            break
+total = 0
+
+for name, seq in mcb185.read_fasta(sys.argv[1]):
+    if hah(seq[:30], 8, 2.5) is True and hah(seq[30:], 11, 2.0) is True:
+        total += 1
+        
+        short = name.split()
+        print(short[0])
+        print(seq)
+print(total)
+
 """
 python3 41transmembrane.py ~/DATA/E.coli/GCF_000005845.2_ASM584v2_protein.faa.gz
 NP_414560.1 Na(+):H(+) antiporter NhaA [Escherichia coli str. K-12 substr. MG1655]
