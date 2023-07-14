@@ -14,6 +14,9 @@ s = 'ACGT' # a string
 print(s, s[0], s[1])
 print(s[2], s[2:3], s[2:4], s[2:5])
 
+a = 'ABCDEFG'
+print(a[:7])
+
 # You can also do the following shortcuts
 print( ) 
 print(s[:2]) # the 0 is implict on the left
