@@ -36,15 +36,13 @@ def KD(aa):
 
 def hah(seq, winsiz, threshold):
     # hydrophobic alpha helix
-    window = ' '
-    
     for i in range(len(seq) - winsiz):
         window = seq[i:i + winsiz]
         kd = 0
         a = 0
         
         for aa in range(len(window)):
-            if window[aa] == 'P': kd = -100
+            if aa == 'P': break
             kd += KD(window[aa])
             a += 1
         if a == winsiz and (kd/a) > threshold:
@@ -55,10 +53,7 @@ total = 0
 for name, seq in mcb185.read_fasta(sys.argv[1]):
     if hah(seq[:30], 8, 2.5) is True and hah(seq[30:], 11, 2.0) is True:
         total += 1
-        
-        short = name.split()
-        print(short[0])
-        print(seq)
+        print(name)
 print(total)
 
 """
