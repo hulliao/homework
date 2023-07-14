@@ -12,6 +12,92 @@
 
 # Note: don't worry about "centering" the entropy on the window (yet)
 
+import sys
+import mcb185
+import gzip
+import math
+
+altseq = ''
+
+altsys = []
+
+winsiz = int(sys.argv[2])
+threshold = float(sys.argv[3])
+
+#returns probability of nucleotide
+def prob(nt, seq):
+    a = 0
+    c = 0
+    g = 0
+    t = 0
+    for n in seq:
+        if n == 'A': a += 1
+        if n == 'C': c += 1
+        if n == 'T': t += 1
+        else: g += 1
+    if nt == 'A': return (a/len(seq))
+    if nt == 'C': return (c/len(seq))
+    if nt == 'T': return (t/len(seq))
+    if nt == 'G': return (g/len(seq))
+
+#return the shannon entropy of one section
+def shanentr(seq):
+    total = 0
+    for nt in seq: 
+        total += prob(nt, seq) * math.log(prob(nt,seq), 2)
+    return total * -1
+
+def entropy(P):
+    assert(math.isclose(sum(P), 1))
+    h = 0
+    for p in P:
+        h -= p * math.log2(p)
+    return h
+
+def seqentr(seq):
+    a = seq.count('A') / len(seq)
+    c = seq.count('C') / len(seq)
+    g = seq.count('G') / len(seq)
+    t = seq.count('T') / len(seq)
+    
+    p = []
+    if a != 0: p.append(a)
+    if c != 0: p.append(c)
+    if g != 0: p.append(g)
+    if t != 0: p.append(t)
+    return entropy(p)
+
+# run each sequence through the shanentr function
+# compare the outcome to the threshold
+# replace everything in that with 'N'
+
+print(seqentr('AACCGGTT')
+
+for name, seq in mcb185.read_fasta(sys.argv[1]):
+    mask = list(seq)
+    for i in range(3,8):
+        mask[i] = 'N'
+    m = ''.join(mask)
+    for i in range(0, len(m), 20):
+        print(m[i:i+20])
+    break
+    
+    for i in range(len(seq) - winsiz + 1):
+        wind = seq[i:i+winsiz]
+        if seqentr(wind) < threshold:
+            for j in range(i, i + winsiz):
+                mask[j] = 'N'
+    m = (''.join(mask))
+    
+    for i in range(0, len(m), 60):
+        print(m[i:i + 60)
+
+"""
+    for i in range(len(seq) - float((winsiz):
+        for nt in seq[i:i + winsiz]:
+            entropy = shanentr(seq)
+            if entropy < threshold: seq[i:i + winsiz] = 'N' * winsiz
+"""
 
 """
 python3 42dust.py ~/DATA/E.coli/GCF_000005845.2_ASM584v2_genomic.fna.gz 11 1.4
