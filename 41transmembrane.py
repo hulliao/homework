@@ -47,11 +47,11 @@ def hah(seq, winsiz, threshold):
             a += 1
         if a == winsiz and (kd/a) > threshold:
             return True
-            break
+    return False
 total = 0
 
 for name, seq in mcb185.read_fasta(sys.argv[1]):
-    if hah(seq[:30], 8, 2.5) is True and hah(seq[30:], 11, 2.0) is True:
+    if hah(seq[:30], 8, 2.5) and hah(seq[30:], 11, 2.0):
         total += 1
         print(name)
 print(total)
