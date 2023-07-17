@@ -9,6 +9,35 @@
 # Variation: use 20 named variables
 # Variation: use a list
 
+#TESTING
+'''
+no = [0] * 10
+for i in range(1,6):
+    no[i] += 1
+print(no)
+'''
+
+import gzip
+import sys
+
+amino = 'ACDEFGHIKLMNPQRSTVWY'
+counts = [0] * 20
+per = [0] * 20
+total = 0
+with gzip.open(sys.argv[1], 'rt') as fp:
+    for line in fp.readlines():
+        for letter in line:
+            idx = amino.find(letter)
+            counts[idx] += 1
+            if idx == -1: continue
+            total += 1
+print(total)
+print(per)
+print(counts)
+
+for aa, count in zip(amino, counts):
+    print(aa, count, f'{count / total:.4f}')
+
 
 """
 python3 40aacomp.py ~/DATA/E.coli/GCF_000005845.2_ASM584v2_protein.faa.gz

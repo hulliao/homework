@@ -24,8 +24,8 @@ import statistics
 #how big genome
 
 gensize = int(sys.argv[1])
-readnum = int(sys.argv[2])
-readlen = int(sys.argv[3])
+readnum = int(sys.argv[2]) # number of "scans" that scan a fragment in the genome that's the read length
+readlen = int(sys.argv[3]) # number of nucleotides/indexes in each fragment
 
 genome = [0] * gensize
 #find random position and put read in position
