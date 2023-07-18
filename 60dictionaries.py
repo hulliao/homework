@@ -5,8 +5,6 @@ import random
 
 # Move the triple quotes downward to uncover each segment of code
 
-
-
 # A dictionary is like a list, but with text instead of numeric indicies
 
 mylist = [3, 4, 7]  # create a list with square brakets
@@ -97,6 +95,13 @@ def kd_cond(seq):
 		elif aa == 'R': kd += -4.5
 	return kd/len(seq)
 
+def quadratic(a, b, c): #TESTING
+    x1 = (-b + math.sqrt(b ** 2 - 4 * a * c)) / (2 * a)
+    x2 = (-b - math.sqrt(b ** 2 - 4 * a * c)) / (2 * a)
+    return x1, x2
+a = quadratic(1, 2, 0)
+print(a)
+
 # Here's the parallel container function
 
 aas = 'IVLFCMAGTSWYPHEQDNKR'
@@ -123,6 +128,7 @@ def kd_dict(seq):
 	for aa in seq: kd += aa2kd[aa]
 	return kd/len(seq)
 
+'''
 seq = 'MVQYNFKRITVVPNGKEFVDIILSRTQRQTPTVVHKGYKINRLRQFYMRKVKYTQTNFHA'
 print(kd_cond(seq))
 print(kd_list(seq))
@@ -145,4 +151,4 @@ for k in sorted(aa2kd):
 # If you want to sort by value, it's only a little more complicated
 for k, v in sorted(aa2kd.items(), key=lambda item: len(item[1][pets])):
 	print(k, v)
-
+'''

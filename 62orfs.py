@@ -15,6 +15,24 @@
 
 # Note: your genes should be similar to those in the real genome
 
+import mcb185
+import sys
+import argparse
+
+def findorf(seq):
+    start = []
+    end = []
+    for aa in seq:
+        #continue until find *
+        if aa =='M':
+            start.append(seq.index(aa))
+            while aa != '*':
+                continue
+            end.append(seq.index(aa) * 3)
+
+for name, seq in mcb185.read_fasta(sys.argv[1]):
+    seq = mcb185.translate(seq)
+
 
 """
 python3 62orfs.py ~/DATA/E.coli/GCF_000005845.2_ASM584v2_genomic.fna.gz
