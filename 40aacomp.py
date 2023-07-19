@@ -24,12 +24,12 @@ amino = 'ACDEFGHIKLMNPQRSTVWY'
 counts = [0] * 20
 per = [0] * 20
 total = 0
-with gzip.open(sys.argv[1], 'rt') as fp:
+with gzip.open(sys.argv[1], 'rt') as fp: #rt is a format, must put when doing gzip.open
     for line in fp.readlines():
         for letter in line:
             idx = amino.find(letter)
             counts[idx] += 1
-            if idx == -1: continue
+            if idx == -1: continue #-1 represents an "enter" in the line of the file
             total += 1
 print(total)
 print(per)
