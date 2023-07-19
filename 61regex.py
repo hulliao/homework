@@ -4,8 +4,6 @@ import re
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 string1 = "0123456789"
 
 # Regular expressions (regex) are used to look for patterns in strings
@@ -55,6 +53,9 @@ if match:
 	print(match.group(1))
 	print(match.group(2))
 
+pat4 = 'atagcgaat@gmail.com'
+if re.search(pat4, string2): print(f'found {pat4}') #TESTING
+
 # If you want to find a pattern multiple times in a string, use finditer()
 
 seq = 'ATCCGACTCCGTGCCGCCGCAGGGAGTGTGTCAAGTTACAGAGGCGCCGGAATCGGCCCCTGCGCTCCTCG'
@@ -81,5 +82,3 @@ print(match.group(1))
 
 match = re.search('ID=(\S+?);', data)
 print(match.group(1))
-
-"""
