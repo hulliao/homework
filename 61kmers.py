@@ -8,7 +8,6 @@
 # Hint: use argparse
 # Hint: use mcb185.read_fasta()
 
-#VERY COMPLEX
 
 """
 python3 60kmers.py ~/DATA/E.coli/GCF_000005845.2_ASM584v2_genomic.fna.gz 2

@@ -6,14 +6,12 @@ import time
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # Dictionaries are much faster for lookups than lists
 # Here's a demonstration
 
 # First, let's create a list of random peptides with random values
-peplen = 10
-pepcount = 100000
+peplen = 4
+pepcount = 10
 peptides = []
 values = []
 
@@ -28,6 +26,10 @@ for i in range(pepcount):
 	val = (random.random())
 	values.append(val)
 	pepdict[pep] = val
+#print(peptides)
+#print(val)
+#print(values)
+#print(pepdict)
 
 # Now let's search and see how long it takes
 print(f'searching {pepcount} items', file=sys.stderr)
@@ -64,5 +66,3 @@ print(f'dict is {list_time/dict_time} times faster', file=sys.stderr)
 # |  10K |   130 |
 # | 100K |  1380 |
 # |   1M |  N.D. |
-
-"""

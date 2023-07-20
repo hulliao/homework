@@ -38,8 +38,8 @@ def hah(seq, winsiz, threshold):
     # hydrophobic alpha helix
     for i in range(len(seq) - winsiz):
         window = seq[i:i + winsiz]
-        kd = 0
-        a = 0
+        kd = 0 #variable for KD value
+        a = 0 #amino acid count
         
         for aa in range(len(window)):
             if aa == 'P': break
