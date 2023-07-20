@@ -28,6 +28,7 @@ for item in mydict.items(): print(item, item[0], item[1]) # a tuple
 for key, val in mydict.items(): print(key, val) # unpacked tuple
 
 print(mydict.items())
+#result is "dict_items([('cat', 3), ('dog', 4), ('pig', 7)])"
 
 # You can add values to a dictionary by assigning new key:value pairs
 
