@@ -21,6 +21,7 @@ altseq = ''
 
 altsys = []
 
+file = sys.argv[1]
 winsiz = int(sys.argv[2])
 threshold = float(sys.argv[3])
 
@@ -73,7 +74,7 @@ def seqentr(seq):
 
 print(seqentr('AACCGGTT')
 
-for name, seq in mcb185.read_fasta(sys.argv[1]):
+for name, seq in mcb185.read_fasta(file)
     mask = list(seq)
     for i in range(3,8):
         mask[i] = 'N'
