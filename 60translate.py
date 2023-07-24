@@ -59,6 +59,7 @@ caagaatacgacgagtccggcccatccatcgttcaccgcaagtgcttctaa\
 "
 
 def translate(seq):
+    seq = seq.upper() #convertung the sequence to uppercase
     aas = [] #amino acid sequence/protein
     for i in range(0, len(seq), 3):
         codon = seq[i:i+3] #3 nucleotides combined together
@@ -69,8 +70,7 @@ def translate(seq):
     joined = "".join(aas) #the amino acids are originally all separated and individual letters so joining them makes the protein look cohesive
     return joined
 
-upper = actin_cds.upper() #converting the sequence to uppercase letters
-print(translate(upper))
+print(translate(actin_cds))
 
 act_protein = "\
 MCDDEVAALVVDNGSGMCKAGFAGDDAPRAVFPSIVGRPRHQGVMVGMGQKDSYVGDEAQ\

@@ -13,6 +13,7 @@ s = 'ACGT' # a string
 
 print(s, s[0], s[1])
 print(s[2], s[2:3], s[2:4], s[2:5])
+print(s[:]) #includes everything
 
 a = 'ABCDEFG'
 print(a[:7])
