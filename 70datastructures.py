@@ -4,8 +4,6 @@ import json
 
 # Move the triple quotes downward to uncover each segment of code
 
-"""
-
 # In a 2D list, each element of a list contains another list
 
 list2d = [
@@ -65,5 +63,3 @@ with open('mcb185.json') as fp:
 	print(course['Title'])
 	for student in course['Students']:
 		print(student['Name'], student['Year'])
-
-"""
