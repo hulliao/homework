@@ -25,7 +25,9 @@ if pat1 in string1: print(f'found {pat1} with in')
 #    \d    matches any number
 #    .     matches any character
 #    \.    matches an actual dot
+#    \s+   matches any number of whitespace/blank/space characters
 #    \w+   matches any number of word symbols
+#    \d+   matches any number of numbers
 #    [ab]  matches the letter a or b
 #    [a-d] matches the letters a, b, c, d
 #    ()    used for capturing groups
