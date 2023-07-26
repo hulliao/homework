@@ -32,6 +32,7 @@ if pat1 in string1: print(f'found {pat1} with in')
 #    [a-d] matches the letters a, b, c, d
 #    ()    used for capturing groups
 #    \(    matches a left parenthese
+#    \any character     matches any character
 # The rules for regex are quite long, so it's best to have a cheat sheat handy
 # You should make your own, and write it in Markdown (that's homework)
 
